@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* rainbow text start */
+.rainbow {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 32px;
+  font-family: monospace;
+  letter-spacing: 5px;
+}
+.rainbow_text_animated {
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 100% 0;
+  }
+}
+/* rainbow text done */
+</style>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title is-bold">
+            <span class="rainbow_text_animated" style="vertical-align: middle">3DMM Language Model</span>
+            </h1>
+          <h1 class="subtitle is-1 publication-subtitle">
+            <b>Bridging Facial Understanding and Animation via Language Models</b>
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="rainbow_text_animated">
+              CVPR 2026
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors" style="width: 90%; margin: 10px auto;" >
+            <span class="author-block">
+              <a href="https://songluchuan.github.io/">Luchuan Song</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://andypinxinliu.github.io/">Pinxin Liu</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="">Haiyang Liu</a><sup>2</sup>,</span>
+
+            <span class="author-block">
+              <a href="">Zhenchao Jin</a>,</span>
+              
+            <span class="author-block">
+              <a href="">Yolo Yunlong Tang</a><sup>1</sup>,</span>
+            
+            <span class="author-block">
+              <a href="">Zicong Xu</a><sup>1</sup>,</span>
+            
+            <span class="author-block">
+              <a href="">Susan Liang</a><sup>1</sup>,</span>
+            
+            <span class="author-block">
+              <a href="">Jing Bi</a><sup>1</sup>,</span>
+            
+            <span class="author-block">
+              <a href="">Jason J Corso</a><sup>3,4</sup>,</span>
+            <span class="author-block">
+
+              <a href="">Chenliang Xu</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Rochester,</span>
+<!--             <span class="author-block"><sup>2</sup>Sony AI,</span> -->
+            <span class="author-block"><sup>2</sup>University of Tokyo,</span>
+            <span class="author-block"><sup>3</sup>University of Michigan,</span>
+            <span class="author-block"><sup>4</sup>Voxel51</span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors" style="width: 80%; margin: 10px auto;" >
+            <span class="author-block" style="font-size:18px">Anonymous Submission</span>
+
+        </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/Anonymous"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/---------(Anonymous)"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <!-- <span class="link-block">
+                <a href="F_Supp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Appx</span>
+                  </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href="https://github.com/---------(Anonymous)"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+            
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="./static/images/F_Teaser.png"/>
+      <p>
+        <div class="content has-text-justified">
+        Figure. 1. Overview of the proposed Open3DFaceVid dataset and 3D facial understanding/animation pipeline. The left panel visualizes the Open3DFaceVid corpus, which covers a wide range of identities, emotions, and speaking styles generated via text-to-video (T2V) models. The right panel illustrates our interactive 3D facial interface: given a 3DMM sequence, the user prompts the agent to describe expressions and head motion in natural language, and the agent returns fine-grained, parameter-based interpretations. In the reverse direction, the agent is able to condition on user prompts to generate new 3DMM trajectories with controllable emotion and pose.
+      </div>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">The Overview of Open3DFaceVid</h2>
+        <p style="font-size: 1.2em;">The prompt attributions for each video are shown on the above</p>
+        <!-- <p style="font-size: 1.1em;"> ↓ The appearance have a sense of technology with smooth skin and blue eyes ↓</p> -->
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-hulk">
+          <p style="color: black; font-size: 16px;">The man faces the camera in tight framing, his head taking the frame, and speaks with barely noticeable grief.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/00000.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-1">
+          <p style="color: black; font-size: 16px;">A man confronts the camera in a head-filling close-up and speaks, a powerful nervous vibe.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/00001.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-2">
+          <p style="color: black; font-size: 16px;">The lady have a slight smile forms and lingers, and the expression is calm.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/00002.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-3">
+          <p style="color: black; font-size: 16px;">A old female customer support agent framed by a medium disgust expression. Her head taking the frame.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/00003.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-3">
+          <p style="color: black; font-size: 16px;">He keeps looking at the camera, and muted contempt in his gaze, a pronounced happy gaze.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/00004.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-3">
+          <p style="color: black; font-size: 16px;">He centers himself to the camera and carries a measured sad look and an intense angry look.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/00005.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-3">
+          <p style="color: black; font-size: 16px;">The man holds clear surprise on his face, then with a marked happy look.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/00006.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-3">
+          <p style="color: black; font-size: 16px;">A female speaks in a warm tone, punctuating phrases with a confidence expression.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/00007.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <p style="font-size: 1.2em;">We also include some videos data with synchronized audio and video [please turn on the audio]</p>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-hulk">
+          <p style="color: black; font-size: 16px;">His expression start from confuse then shifts to surprise as he begins to speak.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/av_00000.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-1">
+          <p style="color: black; font-size: 16px;">The man begins with a soft, closed-mouth smile. As he starts to speak, his smile widens slightly.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/av_00001.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-2">
+          <p style="color: black; font-size: 16px;">The young girl has a pleasant and engaged expression with wide, curious eyes and a slightly open mouth.</p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/av_00002.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-3">
+          <p style="color: black; font-size: 16px;">The woman has a pleasant and engaged expression, smiling warmly. Her head moves subtly and naturally. </p>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/Videos/av_00003.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-guided human body animation has advanced rapidly, yet facial animation lags due to the scarcity of well-annotated, text-paired facial corpora. To close this gap, we leverage foundation generative models to synthesize a large, balanced corpus of facial behavior. We design prompts suite covering emotions and head motions, generate about 80 hours of facial videos with multiple generators, and fit per-frame 3D facial parameters, yielding large-scale (prompt and parameter) pairs for training. Building on this dataset, we probe language models for bidirectional competence over facial motion via two complementary tasks: (1) Motion2Language: given a sequence of 3D facial parameters, the model produces natural-language descriptions capturing content, style, and dynamics; and (2) Language2Motion: given a prompt, the model synthesizes the corresponding sequence of 3D facial parameters via quantized motion tokens for downstream animation. Extensive experiments show that in this setting language models can both interpret and synthesize facial motion with strong generalization. To best of our knowledge, this is the first work to cast facial-parameter modeling as a language problem, establishing a unified path for text-conditioned facial animation and motion understanding. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Open3DFaceVid Dataset</h2>
+    <div class="content has-text-justified">
+        <img src="./static/images/Website_Dataset.png"/>
+      <p>Figure. 2. The analysis of the Open3DFaceVid dataset and the overview of the dataset (include the corresponding Flame geometry).  We summarize the control categories induced by prompts and their corresponding video counts, broken down by underlying T2V backbones. We further visualize the vocabulary with word clouds, separately for emotion-related terms and for full-text prompts, to highlight the diversity and saliency of affective descriptors.</p>
+    </div>
+  </div>
+</section>
+<br>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Method</h2>
+    <div class="content has-text-justified">
+      <img src="./static/images/methods.png" style="width: 95%; height: auto; display:block; margin: 0 auto;" />
+      <p>Figure. 3. (a) <b>Motion2Language.</b> Geometry sequences are encoded into discrete facial tokens by the geometry encoder and fed, together with text tokens from the user prompt, into a LLM. Conditioned only on these geometry tokens, the agent generates natural-language descriptions of expression/head motion, enabling interactive question to answering about 3D facial behavior. (b) <b>Language2Motion.</b> The user provides a natural-language description of the desired facial behavior (top left). The text tokenizer converts the prompt into word-level tokens, while a paired 3D facial sequence is encoded into discrete geometry tokens by the geometry encoder. The autoregressive transformer predicts future geometry tokens conditioned on the text prefix.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered mt-5">Language2Motion-Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_pout.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_singing.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_surprise.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_worry.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_fear.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_amazement.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_shock.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_neutral.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_angry.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_demo_videos/F_happy.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered mt-5">Motion2Language-Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_01.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_02.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_03.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_04.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_05.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_06.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_07.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_08.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_09.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2l_videos/F_m2l_10.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered mt-5">Language2Motion-Results [with Audio Condition]</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_01.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_02.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_03.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_04.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_05.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_06.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_07.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_08.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="./static/F_m2la_videos/F_videos_av_09.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<br> 
+<br> 
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code></code>@misc{
+      CVPR conference 2026,
+      # TBD
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer" style="padding-top: 6px; padding-bottom: 6px;">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Our website template comes from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and is modified based on it. Thanks to the authors for providing beautiful icons.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
